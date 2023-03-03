@@ -1,4 +1,5 @@
 
+
 using System;
 
 internal class ChatAPI
@@ -30,6 +31,11 @@ internal class ChatAPI
     }
     private static void Question(string answer)
     {
+        if(answer == "no")
+        {
+            Console.WriteLine("Okay. Logging off ...");
+            Console.WriteLine("This session has ended. Hope you liked the AI bot. Please read the readme.txt for more information about why the computer put this long line of code into github.com.");
+        }
         if(answer == "Lets play ISpy")
         {
             Console.WriteLine("Okay! I spy with my robotic eye ... Something red.");
@@ -62,5 +68,9 @@ internal class ChatAPI
                 string gameobject = Console.ReadLine();
                 Console.WriteLine($"Oh, the {gameobject} is(or) {color}!");
             }
+            Console.WriteLine("Is there anything else I can help you with?");
+            answer2 = Console.ReadLine();
+        Question(answer2);
         }
     }
+}
